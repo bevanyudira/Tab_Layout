@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="50dp"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/jakartab"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/placeUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/txt_login"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/borderbox">
+        <TextView
+            android:id="@+id/txtUpdateDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_description"
+            android:textColor="@color/grey"/>
+        <LinearLayout
+            android:id="@+id/txtUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_description"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_date"
+                android:textStyle="bold"
+                android:textColor="@color/blue"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtNextUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nextupdate_description"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nextupdate_date"
+                android:textStyle="bold"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCatalog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardElevation="9dp"
+        app:cardCornerRadius="9dp"
+        android:layout_below="@id/placeUpdate"
+        android:layout_marginTop="50dp"
+        android:layout_alignLeft="@id/placeUpdate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/katalogicon"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textButtonCatalog" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardbookmark"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardElevation="9dp"
+        app:cardCornerRadius="9dp"
+        android:layout_below="@id/placeUpdate"
+        android:layout_marginTop="50dp"
+        android:layout_alignRight="@id/placeUpdate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bookmarkicon"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textButtonBookmark" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardReport"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardElevation="9dp"
+        app:cardCornerRadius="9dp"
+        android:layout_below="@id/cardCatalog"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@id/placeUpdate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reporticon"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textButtonReport" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSetting"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardElevation="9dp"
+        app:cardCornerRadius="9dp"
+        android:layout_below="@id/cardCatalog"
+        android:layout_marginTop="30dp"
+        android:layout_alignRight="@id/placeUpdate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/settingicon"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textButtonSetting" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
